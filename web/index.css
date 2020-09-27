@@ -1,0 +1,322 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header' 'sidebar main main main main' 'footer footer footer footer footer';
+}
+
+
+.grid-child {
+    color: dodgerblue;
+}
+
+.header {
+    grid-area: header;
+    min-height: 75px;
+    background-color: dodgerblue;
+    color: white;
+    box-shadow: 5px 5px 3px gray;
+    margin-bottom: 10px;
+}
+.header-grid-container {
+    display: grid;
+    grid-template-areas: 'logo school school school school school school school school school';
+}
+
+.logo  {
+    grid-area: logo;
+    margin-right: 120px;
+}
+
+#logo {
+    margin: 20px 0px 20px 75px;
+}
+
+.school  {
+    grid-area: school;
+    font-size: 40px;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: left;
+    padding: 40px;
+}
+
+.sign-in  {
+    grid-area: sign-in;
+    text-align: center;
+    padding: 25px 0px;
+}
+button {
+    box-shadow: 3px 3px 1.5px gray;
+    width: 100px;
+    padding: 10px;
+    border-radius: 60px 60px 60px 60px;
+    background-color: forestgreen;
+    color: white;
+    margin-top: 25px;
+}
+
+button:hover {
+    background-color: rgb(39, 238, 39);
+}
+
+.sidebar {
+    grid-area: sidebar;
+    min-height: 200px;
+    border-right: dodgerblue 1px solid;
+}
+
+.main {
+    grid-area: main;
+    min-height: 300px;
+    padding-left: 15px;
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template-areas: 'title title' 'picture1 text1' 'text2 picture2';
+}
+
+.main-grid-child {
+    margin: 20px;
+}
+
+.title {
+    text-align: center;
+    grid-area: title;
+}
+
+.picture1 {
+    grid-area: picture1;
+}
+
+.picture2 {
+    grid-area: picture2;
+}
+
+.text1 {
+    grid-area: text1;
+    font-size: 20px;
+    margin-right: 50px;
+    border: dodgerblue 2px solid;
+    box-shadow: 3px 3px 2px gray;
+}
+
+.text2 {
+    grid-area: text2;
+    font-size: 20px;
+    margin-right: 50px;
+    border: forestgreen 2px solid;
+    box-shadow: 3px 3px 2px gray;
+}
+
+.academics-grid {
+    display: grid;
+    grid-template-areas: 'title' 'degrees';
+}
+
+.degrees {
+    grid-area:degrees;
+    font-size: 20px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    border: dodgerblue 2px solid;
+    box-shadow: 3px 3px 2px gray;
+}
+
+.footer {
+    grid-area: footer;
+    min-height: 150px;
+    
+}
+
+.footer-grid-container {
+    display: grid;
+    grid-template-areas: 'Blank Contact Follow Nothing'
+}
+
+@media only screen and (max-width: 550px) {
+    .footer-grid-container {
+        grid-template-areas: 'Contact' 'Follow';
+    }
+    .grid-container {
+        grid-template-areas: 'header' 'sidebar' 'main' 'footer';
+    }
+}
+
+@media only screen and (max-width:1150px) {
+    .main-grid-container {
+        grid-template-areas: 'title' 'picture1' 'text1' 'picture2' 'text2';
+    }
+
+    .athletics-grid {
+        grid-template-areas: 'title' 'sport1' 'sport2' 'sport3';
+    }
+}
+
+.footer-grid-child {
+    text-align:center;
+    margin:10px;
+    
+}
+
+.contact {
+    grid-area:Contact;
+    font-size: 25px;
+    text-align: left;
+    
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+li:hover {
+    background-color: rgb(94, 94, 94);
+}
+
+li.degreelist:hover {
+    background-color: forestgreen;
+    color: white;
+}
+
+.follow {
+    grid-area:Follow;
+    font-size: 25px;
+    text-align: left;
+}
+
+.secondary-grid-container {
+    display: grid;
+    grid-template-areas: 'Homepage' 'Roster' 'Record';
+}
+
+.secondary-grid-child {
+    color: white;
+    border: dodgerblue solid 1.5px;
+    background-color: dodgerblue;
+    border-radius: 60px 60px 60px 60px;
+    text-align: center;
+    padding: 10px 25px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    box-shadow: 2px 2px 1px gray;
+}
+.secondary-grid-child:hover {
+    background-color: skyblue;
+}
+
+.homepage {
+    grid-area: Homepage;
+    min-height: 30px;
+}
+
+.roster {
+    grid-area: Roster;
+    min-height: 30px;
+}
+
+.record {
+    grid-area: Record;
+    min-height: 30px;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#klawok {
+    margin-left: 30px;
+}
+
+.athletics-grid {
+    display: grid;
+    grid-template-areas: 'title title title' 'sport1 sport2 sport3';
+    
+}
+
+.sport1 {
+    grid-area: sport1;
+    display:inline-block;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 50px;
+            text-align: center;
+            border: black 2px solid;
+            font-family: cursive;
+            font-style: italic;
+            font-size: 25px;
+            
+}
+
+.sport1:hover {
+    box-shadow: 3px 3px 2px gray;
+}
+
+.sport2 {
+    grid-area: sport2;
+    display:inline-block;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: black 2px solid;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.sport2:hover {
+    box-shadow: 3px 3px 2px gray;
+}
+
+.sport3 {
+    grid-area:sport3;
+    display:inline-block;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    text-align: center;
+    border: black 2px solid;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.sport3:hover {
+    box-shadow: 3px 3px 2px gray;
+}
+
+
+.arts-grid {
+    display: grid;
+    grid-template-areas: 'title title title' 'art1 art2 art3' 'description description description';
+}
+
+.art1 {
+    grid-area: art1;
+}
+
+.art2 {
+    grid-area: art2;
+}
+
+.art3 {
+    grid-area: art3;
+}
+
+.description {
+    grid-area:description;
+    border-top: forestgreen 1px solid;
+    padding:10px;
+}
+
+table, td, th {
+    border: 1px solid dodgerblue;
+}
+
+.weeks {
+    text-align: center;
+    color: dodgerblue;
+}
