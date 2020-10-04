@@ -1,0 +1,85 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header' 'navigation main main main main';
+}
+
+
+.header {
+    grid-area: header;
+    text-align: center;
+    background-color: rgb(241, 50, 50);
+    padding: 15px;    
+    border-bottom: black 5px solid;
+}
+
+.navigation {
+    grid-area: navigation;
+    border-right: black 3px solid;
+    min-height: 800px;
+    padding-top: 30px;
+}
+.secondary-grid-container {
+    display: grid;
+    grid-template-areas: 'Browse' 'Cart' 'Checkout';
+}
+
+.secondary-grid-child {
+    color: white;
+    border: rgb(241, 50, 50) solid 1.5px;
+    background-color: rgb(241, 50, 50);
+    border-radius: 60px 60px 60px 60px;
+    text-align: center;
+    padding: 10px 25px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    box-shadow: 2px 2px 1px gray;
+}
+.secondary-grid-child:hover {
+    background-color: rgb(245, 179, 179);
+}
+
+.browse {
+    grid-area: Browse;
+
+}
+
+.cart {
+    grid-area: Cart;
+}
+
+.checkout {
+    grid-area: Checkout;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main ul{
+    list-style:none;
+    padding:20px;
+} 
+
+.main li {
+    
+    padding: 35px;
+}
+
+p {
+    font-size: 20px;
+    padding: 25px;
+    border: rgb(241, 50, 50) 3px solid;
+    margin: 15px;
+}
+
+form {
+    text-align: center;
+    padding:15px;
+    border: rgb(241, 50, 50) 2px solid;
+    margin: 15px;
+}
