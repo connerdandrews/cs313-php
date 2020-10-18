@@ -48,13 +48,10 @@ if (isset($_POST["full_name"])) {
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            /*$player_id = $row['player_id'];
-            $full_name = $row['full_name'];
-            echo "<p>Name: <a href='playerDetails.php'>$full_name </a><p>";*/
             $player_id = $row['player_id'];
-            $position = $row['position'];
-            $position_name = $row['position_name'];
-            echo "<p>Player: $player_id plays $position_name which is position number $position.<p>";
+            $full_name = $row['full_name'];
+            echo "<p>Name: <a href='playerDetails.php'>$full_name </a><p>";
+            
 
         }
     ?>
