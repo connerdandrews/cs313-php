@@ -29,18 +29,30 @@ CREATE TABLE stats (
     triples int NOT NULL,
     homeruns int NOT NULL,
     batting_strikeouts int NOT NULL,
-    batting_average real NOT NULL,
-    onbase_percentage real NOT NULL, 
-    ops_percentage real NOT NULL,
-    slugging_percentage real NOT NULL,
-    innings_pitched int NOT NULL,
-    pitching_strikeouts int NOT NULL,
-    pitching_walks int NOT NULL,
-    pitching_runs_scored int NOT NULL,
-    era real NOT NULL,
-    whip real NOT NULL,
-    left_handed_percentage real NOT NULL,
+    batting_average real,
+    onbase_percentage real, 
+    ops_percentage real,
+    slugging_percentage real,
+    innings_pitched int,
+    pitching_strikeouts int,
+    pitching_walks int,
+    pitching_runs_scored int,
+    era real,
+    whip real,
+    left_handed_percentage real,
     errors int NOT NULL,
     double_plays bigint NOT NULL,
     triple_plays bigint NOT NULL
 );
+
+INSERT INTO player (full_name)
+VALUES ('Betts');
+
+INSERT INTO positions (position, position_name)
+VALUES (9, 'RF');
+
+INSERT INTO teams (team_name, league_name)
+VALUES ('LA Dodgers', 'National League');
+
+INSERT INTO stats (at_bats, hits, walks, runs, stollen_bases, doubles, triples, homeruns, batting_strikeouts, errors, double_plays, triple_plays)
+VALUES (200, 68, 20, 30, 7, 10, 2, 16, 45, 2, 3, 0);

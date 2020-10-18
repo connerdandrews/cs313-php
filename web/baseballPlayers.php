@@ -21,14 +21,18 @@ if (isset($_POST["full_name"])) {
     <div>
         <h2>Baseball Players</h2>
     <?php
-        $statement = $db->prepare("SELECT player_id, full_name FROM player");
+        $statement = $db->prepare("SELECT * FROM positions");
         $statement->execute();
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $player_id = $row['player_id'];
+            /*$player_id = $row['player_id'];
             $full_name = $row['full_name'];
-            echo "<p>Name: <a href='playerDetails.php'>$full_name </a><p>";
+            echo "<p>Name: <a href='playerDetails.php'>$full_name </a><p>";*/
+            $player_id = $row['player_id'];
+            $position = $row['position'];
+            $position_name = $row['position_name'];
+            echo "<p>Player: $player_id plays $position_name which is position number $position.<p>";
 
         }
     ?>
