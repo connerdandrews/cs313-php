@@ -50,6 +50,8 @@ catch (PDOException $ex)
         {
             $last_name = $row['last_name'];
             $position_id_last_name = $row['position_id_last_name'];
+            $team_id_last_name = $row['team_id_last_name'];
+            $stats_id_last_name = $row['stats_id_last_name'];
             $position = $row['position'];
             $position_name = $row['position_name'];
             $team_name = $row['team_name'];
@@ -79,7 +81,7 @@ catch (PDOException $ex)
             $triple_plays = $row['triple_plays'];
 
 
-            if ($last_name == $position_id_last_name) {
+            if ($last_name == $position_id_last_name && $last_name == $team_id_last_name && $last_name == $stats_id_last_name) {
                 if ($position == 1) {
                     echo "<p>Name: $last_name | Position: $position | Team Name $team_name | ERA: $era | Innings: $innings_pitched | Strikeouts: $pitching_strikeouts | Walks: $pitching_walks | Runs Against: $pitching_runs_scored | WHIP: $whip</p>";
                 }
