@@ -1,25 +1,21 @@
 CREATE TABLE player (
-    player_id SERIAL NOT NULL PRIMARY KEY,
-    full_name varchar(80) NOT NULL,
-    position_id int NOT NULL REFERENCES positions(player_id),
-    team_name_id int NOT NULL REFERENCES teams(player_id),
-    at_bats_id int NOT NULL REFERENCES stats(player_id)
+    last_name varchar(80) NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE positions (
-    player_id SERIAL NOT NULL PRIMARY KEY,
+    last_name varchar(80) NOT NULL references player(last_name),
     position int NOT NULL, 
     position_name varchar(30) NOT NULL
 );
 
 CREATE TABLE teams (
-    player_id SERIAL NOT NULL PRIMARY KEY,
+    last_name varchar(80) NOT NULL references player(last_name),
     team_name varchar(80) NOT NULL,
     league_name varchar(80) NOT NULL
 );
 
 CREATE TABLE stats (
-    player_id SERIAL NOT NULL PRIMARY KEY,
+    last_name varchar(80) NOT NULL references player(last_name),
     at_bats bigint NOT NULL,
     hits bigint NOT NULL,
     walks bigint NOT NULL,
@@ -45,14 +41,14 @@ CREATE TABLE stats (
     triple_plays bigint NOT NULL
 );
 
-INSERT INTO player (full_name)
+INSERT INTO player (last_name)
 VALUES ('Betts');
 
-INSERT INTO positions (position, position_name)
-VALUES (9, 'RF');
+INSERT INTO positions (last_name, position, position_name)
+VALUES ('Betts', 9, 'RF');
 
-INSERT INTO teams (team_name, league_name)
-VALUES ('LA Dodgers', 'National League');
+INSERT INTO teams (last_name, team_name, league_name)
+VALUES ('Betts', 'LA Dodgers', 'National League');
 
-INSERT INTO stats (at_bats, hits, walks, runs, stollen_bases, doubles, triples, homeruns, batting_strikeouts, errors, double_plays, triple_plays)
-VALUES (200, 68, 20, 30, 7, 10, 2, 16, 45, 2, 3, 0);
+INSERT INTO stats (last_name, at_bats, hits, walks, runs, stollen_bases, doubles, triples, homeruns, batting_strikeouts, errors, double_plays, triple_plays)
+VALUES ('Betts', 200, 68, 20, 30, 7, 10, 2, 16, 45, 2, 3, 0);

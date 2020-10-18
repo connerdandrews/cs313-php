@@ -48,15 +48,14 @@ catch (PDOException $ex)
 }
 
 
-        $statement = $db->prepare("SELECT full_name FROM player");
+        $statement = $db->prepare("SELECT last_name FROM player");
         $statement->execute();
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $player_id = $row['player_id'];
-            $full_name = $row['full_name'];
-            if ($POST["last_name"] == $full_name){
-                echo "<p>Name: <a href='playerDetails.php'>$full_name </a><p>";
+            $last_name = $row['last_name'];
+            if ($POST["last_name"] == $last_name){
+                echo "<p>Name: <a href='playerDetails.php'>$last_name </a><p>";
             }
         }
     ?>

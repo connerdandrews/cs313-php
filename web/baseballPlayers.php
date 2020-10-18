@@ -43,13 +43,12 @@ if (isset($_POST["full_name"])) {
         
 
 
-        $statement = $db->prepare("SELECT * FROM positions");
+        $statement = $db->prepare("SELECT * FROM player");
         $statement->execute();
 
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $player_id = $row['player_id'];
-            $full_name = $row['full_name'];
+            $last_name = $row['last_name'];
             echo "<p>Name: <a href='playerDetails.php'>$full_name </a><p>";
             
 
