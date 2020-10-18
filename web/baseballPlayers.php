@@ -49,7 +49,7 @@ if (isset($_POST["full_name"])) {
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             $last_name = $row['last_name'];
-            echo "<p>Name: <a href='playerDetails.php'>$full_name </a><p>";
+            echo "<p>Name: <a href='playerDetails.php'>$last_name </a><p>";
             
 
         }
