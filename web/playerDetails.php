@@ -83,11 +83,11 @@ catch (PDOException $ex)
 
             if ($last_name == $position_id_last_name && $last_name == $team_id_last_name && $last_name == $stats_id_last_name) {
                 if ($position == 1) {
-                    echo "<p>Name: $last_name | Position: $position | Team Name $team_name | ERA: $era | Innings: $innings_pitched | Strikeouts: $pitching_strikeouts | Walks: $pitching_walks | Runs Against: $pitching_runs_scored | WHIP: $whip</p>";
+                    echo "<p>Name: $last_name | Position: $position_name | Team Name $team_name | ERA: $era | Innings: $innings_pitched | Strikeouts: $pitching_strikeouts | Walks: $pitching_walks | Runs Against: $pitching_runs_scored | WHIP: $whip</p>";
                 }
 
                 else {
-                    echo "<p>Name: $last_name | Position: $position | Team Name: $team_name | At-bats: $at_bats | Hits: $hits | Walks: $walks | Runs: $runs | Stollen Bases: $stollen_bases | Doubles: $doubles | Triples: $triples | Homeruns: $homeruns | Strikeouts: $batting_strikeouts | Batting Average: $batting_average | On-base Percentage: $onbase_percentage | OPS: $ops_percentage | Slugging Percentage: $slugging_percentage | Left-handed Percentage: $left_handed_percentage | Errors: $errors | Double Plays: $double_plays | Triple Plays: $triple_plays </p>";
+                    echo "<p>Name: $last_name | Position: $position_name | Team Name: $team_name | At-bats: $at_bats | Hits: $hits | Walks: $walks | Runs: $runs | Stollen Bases: $stollen_bases | Doubles: $doubles | Triples: $triples | Homeruns: $homeruns | Strikeouts: $batting_strikeouts | Batting Average: $batting_average | On-base Percentage: $onbase_percentage | OPS: $ops_percentage | Slugging Percentage: $slugging_percentage | Left-handed Percentage: $left_handed_percentage | Errors: $errors | Double Plays: $double_plays | Triple Plays: $triple_plays </p>";
                 }
             }
         }
