@@ -1,8 +1,8 @@
 </php
 
 session_start();
-if (isset($_POST["full_name"])) {
-    $_SESSION["full_name"] = $_POST["full_name"];
+if (isset($_POST["last_name"])) {
+    $_SESSION["last_name"] = $_POST["last_name"];
 }
 ?>
 

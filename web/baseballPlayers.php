@@ -1,7 +1,7 @@
 </php
 session_start();
-if (isset($_POST["full_name"])) {
-    $_SESSION["full_name"] = $_POST["full_name"];
+if (isset($_POST["last_name"])) {
+    $_SESSION["last_name"] = $_POST["last_name"];
 }
 ?>
 
@@ -50,9 +50,8 @@ if (isset($_POST["full_name"])) {
         {
             $last_name = $row['last_name'];
             echo "<p>Name: <a href='playerDetails.php'>$last_name </a><p>";
-            
-
-        }
+    
+        };
     ?>
     </div>
 </body>
