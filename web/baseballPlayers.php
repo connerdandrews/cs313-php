@@ -10,7 +10,7 @@ if (isset($_POST["last_name"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baseball Stats Homepage</title>
+    <title>Current Saved Roster</title>
 </head>
 <body>
     <div>
