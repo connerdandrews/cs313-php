@@ -17,7 +17,7 @@ session_start();
     </div>
     <div>
         <h2>New Baseball Player</h2>
-        <form action='baseballPlayers.php' method=POST>
+        <form action='newPlayer.php' method=POST>
         Enter player's last name: <input type=text id=last_name name="last_name"><br><br>
         Enter player's first name: <input type=text id=first_name name="first_name"><br><br>
         Enter player's position number: <input type=number id=position_number name="position_number"><br><br>
