@@ -22,6 +22,9 @@ $errors = $_POST["errors"];
 $double_plays = $_POST["double_plays"];
 $triple_plays = $_POST["triple_plays"];
 
+echo "<p>$last_name $first_name $position_number $position $team_name $league_name $at_bats $hits $walks $runs $stollen_bases $doubles $triples $batting_strikeouts $innings_pitched $pitching_strikeouts $pitching_walks $pitching_runs_scored $errors $double_plays $triple_plays</p>";
+
+/*
 try
 {
   $dbUrl = getenv('DATABASE_URL');
@@ -45,7 +48,7 @@ catch (PDOException $ex)
 }
 
 
-$query = 'INSERT INTO player(last_name) VALUE(:last_name)';
+$query = "INSERT INTO player(last_name) VALUE(:last_name)";
 $statement = $db->prepare($query);
 
 $statement->bindvalue(':last_name', $last_name);
@@ -91,5 +94,6 @@ $statement->execute();
 
 header("Location: baseballPlayers.php");
 die();
+*/
 
 ?>
