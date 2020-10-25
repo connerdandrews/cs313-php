@@ -47,14 +47,14 @@ catch (PDOException $ex)
   die();
 }
 
-try {
+
 $query = "INSERT INTO player(last_name) VALUE(:last_name)";
 $statement = $db->prepare($query);
 
 $statement->bindvalue(':last_name', $last_name);
 $statement->execute();
-}
-/*
+
+
 $query_2 = 'INSERT INTO positions(position_id_last_last_name, position, position_name) VALUES(:last_name, :position_number, :position)';
 $statement = $db->prepare($query_2);
 $statement->bindvalue(':last_name', $last_name);
@@ -92,7 +92,7 @@ $statement->bindvalue(':double_plays', $double_plays);
 $statement->bindvalue(':triple_plays', $triple_plays);
 
 $statement->execute();
-*/
+
 header("Location: baseballPlayers.php");
 die();
 
