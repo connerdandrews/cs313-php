@@ -1,8 +1,8 @@
 </php
 
 session_start();
-if (isset($_POST["last_name"])) {
-    $_SESSION["last_name"] = $_POST["last_name"];
+if (isset($_POST["last_name1"])) {
+    $_SESSION["last_name1"] = $_POST["last_name1"];
 }
 ?>
 
@@ -20,7 +20,7 @@ if (isset($_POST["last_name"])) {
     <div>
         <h2>Search Players</h2>
         <form action='baseballPlayers.php' method=POST>
-        Enter player's last name: <input type=text id=last_name name="last_name">
+        Enter player's last name: <input type=text id=last_name1 name="last_name1">
         <button type=submit>Search Players</button>
         </form>
     <?php
@@ -54,7 +54,7 @@ catch (PDOException $ex)
         while ($row = $statement->fetch(PDO::FETCH_ASSOC))
         {
             $last_name = $row['last_name'];
-            if ($POST["last_name"] == $last_name){
+            if ($POST["last_name1"] == $last_name){
                 echo "<p>Name: <a href='playerDetails.php'>$last_name </a><p>";
             }
         }

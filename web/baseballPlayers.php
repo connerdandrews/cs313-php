@@ -1,8 +1,6 @@
 </php
 session_start();
-if (isset($_POST["last_name"])) {
-    $_SESSION["last_name"] = $_POST["last_name"];
-}
+
 ?>
 
 <!DOCTYPE html>
