@@ -141,7 +141,7 @@ $statement = $db->prepare($query);
 $statement->bindvalue(':last_name', $last_name);
 $statement->execute();
 
-header("Location: baseballPlayers.php");
+header("Location: insertPositions.php");
 die();
 
 
