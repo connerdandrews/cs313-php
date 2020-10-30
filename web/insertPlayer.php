@@ -55,7 +55,7 @@ $statement->bindvalue(':last_name', $last_name);
 $statement->execute();
 
 
-$query_2 = 'INSERT INTO positions(position_id_last_last_name, position, position_name) VALUES(:last_name, :position_number, :position)';
+$query_2 = "INSERT INTO positions(position_id_last_last_name, position, position_name) VALUES(:last_name, :position_number, :position)";
 $statement = $db->prepare($query_2);
 $statement->bindvalue(':last_name', $last_name);
 $statement->bindvalue(':position_number', $position_number);
@@ -63,7 +63,7 @@ $statement->bindvalue(':position', $position);
 $statement->execute();
 
 
-$query_3 = 'INSERT INTO teams(team_id_last_name, team_name, league_name) VALUES(:last_name, :team_name, :league_name)';
+$query_3 = "INSERT INTO teams(team_id_last_name, team_name, league_name) VALUES(:last_name, :team_name, :league_name)";
 $statement = $db->prepare($query_3);
 $statement->bindvalue(':last_name', $last_name);
 $statement->bindvalue(':team_name', $team_name);
@@ -71,7 +71,7 @@ $statement->bindvalue(':league_name', $league_name);
 $statement->execute();
 
 
-$query_4 = 'INSERT INTO stats(stats_id_last_name, at_bats, hits, walks, runs, stollen_bases, doubles, triples, homeruns, batting_strikeouts, innings_pitched, pitching_strikeouts, pitching_walks, pitching_runs_scored, errors, double_plays, triple_plays) VALUES(:last_name, :at_bats, :hits, :walks, :runs, :stollen_bases, :doubles, :triples, :homeruns, :batting_strikeouts, :innings_pitched, :pitching_strikeouts, :pitching_walks, :pitching_runs_scored, :errors, :double_plays, :triple_plays)';
+$query_4 = "INSERT INTO stats(stats_id_last_name, at_bats, hits, walks, runs, stollen_bases, doubles, triples, homeruns, batting_strikeouts, innings_pitched, pitching_strikeouts, pitching_walks, pitching_runs_scored, errors, double_plays, triple_plays) VALUES(:last_name, :at_bats, :hits, :walks, :runs, :stollen_bases, :doubles, :triples, :homeruns, :batting_strikeouts, :innings_pitched, :pitching_strikeouts, :pitching_walks, :pitching_runs_scored, :errors, :double_plays, :triple_plays)";
 $statement = $db->prepare($query_4);
 $statement->bindvalue(':last_name', $last_name);
 $statement->bindvalue(':at_bats', $at_bats);
