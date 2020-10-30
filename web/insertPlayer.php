@@ -62,7 +62,7 @@ $statement->bindvalue(':position_number', $position_number);
 $statement->bindvalue(':position', $position);
 $statement->execute();
 
-
+/*
 $query_3 = "INSERT INTO teams(team_id_last_name, team_name, league_name) VALUES(:last_name, :team_name, :league_name)";
 $statement = $db->prepare($query_3);
 $statement->bindvalue(':last_name', $last_name);
@@ -92,6 +92,7 @@ $statement->bindvalue(':double_plays', $double_plays);
 $statement->bindvalue(':triple_plays', $triple_plays);
 
 $statement->execute();
+*/
 
 header("Location: baseballPlayers.php");
 die();
