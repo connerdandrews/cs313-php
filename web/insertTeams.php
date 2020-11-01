@@ -118,7 +118,7 @@ $statement->bindvalue(':league_name', $league_name);
 $statement->execute();
 
 
-header("Location: insertStats.php");
+header("Location: newPlayerStats.php");
 die();
 
 

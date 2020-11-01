@@ -17,12 +17,7 @@ session_start();
     </div>
     <div>
         <h2>New Baseball Player</h2>
-        <form action='insertPlayer.php' method=POST>
-        Enter player's last name: <input type=text id=last_name name="last_name"><br><br>
-        Enter player's first name: <input type=text id=first_name name="first_name"><br><br>
-        
-        Enter team name: <input type=text id=team_name name="team_name"><br><br>
-        Enter league name: <input type=text id=league_name name="league_name"><br><br>
+        <form action='insertStats.php' method=POST>
         Enter number of at-bats: <input type=number id=at_bats name="at_bats"><br><br>
         Enter number of hits: <input type=number id=hits name="hits"><br><br>
         Enter number of walks: <input type=number id=walks name="walks"><br><br>
@@ -41,7 +36,7 @@ session_start();
         Enter number of triple plays:  <input type=number id=triple_plays name="triple_plays"><br><br>
 
 
-        <button type=submit>Add Player</button>
+        <button type=submit>Add Stats</button>
         </form>
     </div>
 </body>

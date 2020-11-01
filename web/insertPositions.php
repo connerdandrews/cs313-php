@@ -120,7 +120,7 @@ $statement->execute();
 
 
 
-header("Location: baseballPlayers.php");
+header("Location: newPlayerTeam.php");
 die();
 
 
