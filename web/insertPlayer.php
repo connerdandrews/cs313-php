@@ -136,12 +136,15 @@ catch (PDOException $ex)
 
 
 $query = "INSERT INTO player(last_name) VALUES(:last_name)";
+$query .= "INSERT INTO positions(position_id_last_last_name, position, position_name) VALUES(:last_name, :position_number, :position)";
 $statement = $db->prepare($query);
 
 $statement->bindvalue(':last_name', $last_name);
+$statement->bindvalue(':position_number', $position_number);
+$statement->bindvalue(':position', $position);
 $statement->execute();
 
-header("Location: insertPositions.php");
+header("Location: baseballPlayers.php");
 die();
 
 
